@@ -2,10 +2,10 @@ kind: Kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
 
 images:
-  - name: myapp
-    newName: kdwilson/go-hello
-    newTag: latest
+- name: myapp
+  newName: kdwilson/go-hello
+  newTag: 3f1d09e822bd6f1b6ccf155098fca84ee3e3e9f1
 
 resources:
-  - deployment.yaml
-  - service.yaml
+- deployment.yaml
+- service.yaml
