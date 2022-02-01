@@ -4,7 +4,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 images:
 - name: myapp
   newName: kdwilson/go-hello
-  newTag: 4d88f166fd46cde38896a26bd18b9dcfea3b6da2
+  newTag: 8a307dac2fe3c27df30f087dffc45b6623f46dd3
 
 resources:
 - deployment.yaml
