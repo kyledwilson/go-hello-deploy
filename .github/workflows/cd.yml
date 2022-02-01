@@ -6,6 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: Homelab
     steps:
       - name: Check out code
         uses: actions/checkout@v2
