@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: go-hello
+  namespace: go-hello
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/issuer: letsencrypt-prod
+spec:
+  tls:
+    - hosts:
+        - go-hello.kyledev.co
+      secretName: kyle-dev-tls
+  rules:
+    - host: go-hello.kyledev.co
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: go-hello
+                port:
+                  name: http
